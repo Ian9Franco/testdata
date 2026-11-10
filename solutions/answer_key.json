@@ -1,0 +1,27 @@
+{
+  "required": [
+    {"id": "estop", "asset_id": "RBT-CDR-01", "route_to": "Field Service", "priority": "P1"},
+    {"id": "protected-occ", "asset_id": "RBT-HBR-04", "route_to": "Perception", "priority": "P1"},
+    {"id": "air", "asset_id": "RBT-HBR-02", "route_to": "Field Service", "priority": "P2"},
+    {"id": "leak", "asset_id": "SCN-LKS-01", "route_to": "Customer Success", "priority": "P2"},
+    {"id": "dirty-lens", "asset_id": "SCN-CDR-02", "route_to": "Field Service", "priority": "P2"},
+    {"id": "cat-throughput", "asset_id": "RBT-RVB-01", "route_to": "Deployment Engineering", "priority": "P2"},
+    {"id": "cat-aluminum", "asset_id": "RBT-RVB-01", "route_to": "Perception", "priority": "P2"},
+    {"id": "scanner-outage", "asset_id": "SCN-RVB-03", "route_to": "Field Service", "priority": "P2"},
+    {"id": "bad-picks", "asset_id": "RBT-PAC-03", "route_to": "Data Engineering", "priority": "P3"},
+    {"id": "duplicates", "asset_id": "SCN-HBR-04", "route_to": "Data Engineering", "priority": "P3"},
+    {"id": "timezone", "asset_id": "SCN-LKS-02", "route_to": "Data Engineering", "priority": "P3"}
+  ],
+  "penalties": [
+    {"asset_id": "RBT-PAC-01", "reason": "PLANNED_PM el miércoles. No es una falla."},
+    {"asset_id": "RBT-PAC-02", "reason": "La cinta vacía de 45 minutos está bajo el umbral de 60."},
+    {"asset_id": "RBT-LKS-02", "reason": "La parada de 30 minutos está bajo el umbral de 45. El robot quedó idle, que es lo correcto."},
+    {"asset_id": "RBT-LKS-01", "unless_route": "Customer Success", "reason": "Ese robot estaba sano y a 45 picks/min. No es Field ni Perception."},
+    {"asset_id": "SCN-LKS-01", "bad_routes": ["Perception", "Field Service"], "reason": "Cámara sana, auditoría manual de acuerdo, sorter de planta. Es Customer Success."},
+    {"asset_id": "SCN-CDR-02", "bad_routes": ["Perception", "Customer Success"], "reason": "camera_health = dirty_lens. La composición no vale hasta limpiar el lente."},
+    {"asset_id": "SCN-CDR-01", "reason": "Es el scanner sano de comparación. La fibra no desapareció."},
+    {"asset_id": "RBT-HBR-01", "reason": "El robot gemelo siguió bien durante la falla de aire. No lo pares."},
+    {"asset_id": "RBT-CDR-02", "reason": "Los otros robots de fibra siguieron pickeando."},
+    {"asset_id": "RBT-CDR-03", "reason": "Los otros robots de fibra siguieron pickeando."}
+  ]
+}

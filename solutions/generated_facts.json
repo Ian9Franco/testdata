@@ -1,0 +1,17 @@
+{
+  "qc_pet_nov3_raw": 30472,
+  "qc_pet_nov3_dedup": 15236,
+  "container_pet_nov3": 15236,
+  "lks_infeed_pet_share_thu_13_17": 0.20993589743589744,
+  "harbor_residue_pet_share_thu_13_17": 0.06971153846153846,
+  "filtered_success_rates": {
+    "RBT-HBR-01": 0.93,
+    "RBT-HBR-02": 0.93,
+    "RBT-HBR-03": 0.93,
+    "RBT-HBR-04": 0.93
+  },
+  "acceptance_window": [
+    "2026-11-04",
+    "2026-11-08"
+  ]
+}
