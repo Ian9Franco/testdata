@@ -1,0 +1,701 @@
+{
+  "open_tickets": [
+    {
+      "ticket_id": "TCK-1042",
+      "opened_at_pt": "2026-11-09 07:12",
+      "facility_id": "F-CDR",
+      "asset_id": "RBT-CDR-01",
+      "channel": "phone",
+      "caller_name": "Mike Delaney",
+      "caller_role": "Shift supervisor",
+      "summary": "Fiber robot stopped pulling bottles; belt still moving; tour at 09:00 PT"
+    },
+    {
+      "ticket_id": "TCK-1044",
+      "opened_at_pt": "2026-11-09 07:40",
+      "facility_id": "F-RVB",
+      "asset_id": null,
+      "channel": "email",
+      "caller_name": "Renee Holt",
+      "caller_role": "General manager",
+      "summary": "Can Riverbend sign acceptance today?"
+    }
+  ],
+  "recent_shift_logs": [
+    {
+      "shift_date": "2026-11-06",
+      "author": "Jordan Blake",
+      "body": "Friday 08:00\u201316:00 PT. Reviewed the Harbor uptime chart only. No customer calls. Did not open Lakeshore, Cedar, Pacific, or Riverbend. There is an unread model-deploy notification; I did not have time to see which asset. Parking it for Monday."
+    },
+    {
+      "shift_date": "2026-11-07",
+      "author": "Alex Romero",
+      "body": "Saturday 04:00\u201313:00 PT. Quiet Saturday. All robots online. No fault codes. Harbor weekly draft is in the inbox and marked ready to send Monday."
+    }
+  ],
+  "recent_events": [
+    {
+      "event_id": "EVT-103",
+      "event_time_pt": "2026-11-04 07:40",
+      "facility_id": "F-RVB",
+      "asset_id": null,
+      "event_type": "acceptance_window",
+      "summary": "Riverbend burn-in (Nov 2\u20133) is closed. Contract acceptance window is Wed Nov 4 through Sat Nov 7, per asset, not per facility."
+    },
+    {
+      "event_id": "EVT-101",
+      "event_time_pt": "2026-11-04 09:00",
+      "facility_id": "F-PAC",
+      "asset_id": "RBT-PAC-01",
+      "event_type": "planned_maintenance",
+      "summary": "Planned preventive maintenance on RBT-PAC-01, 09:00\u201311:00 PT. Fault code PLANNED_PM. Belt stayed up."
+    },
+    {
+      "event_id": "EVT-102",
+      "event_time_pt": "2026-11-05 21:10",
+      "facility_id": "F-LKS",
+      "asset_id": null,
+      "event_type": "customer_voicemail",
+      "summary": "Lakeshore voicemail, unverified: optical sorter OPT-PET-2 faulted Thursday 13:05 PT and was reset Friday 07:20 PT before startup. Logged by Customer Success after hours."
+    },
+    {
+      "event_id": "EVT-100",
+      "event_time_pt": "2026-11-06 02:00",
+      "facility_id": "F-HBR",
+      "asset_id": "RBT-HBR-04",
+      "event_type": "model_deploy",
+      "summary": "Promoted picker model v2.14.0 to RBT-HBR-04 at 02:00 PT. Changelog: improved film recall on fiber lines."
+    },
+    {
+      "event_id": "EVT-104",
+      "event_time_pt": "2026-11-06 08:00",
+      "facility_id": "F-RVB",
+      "asset_id": "RBT-RVB-01",
+      "event_type": "known_blip",
+      "summary": "Deployment noted a network blip on RBT-RVB-01 from 08:00 to 09:00 PT on Nov 6. Robot recovered. Not a safety event. Already on the commissioning log."
+    }
+  ],
+  "estop_or_fault_islands": [
+    {
+      "asset_id": "RBT-RVB-01",
+      "fault_code": "OFFLINE",
+      "start_pt": "2026-11-06 08:00",
+      "end_pt_exclusive": "2026-11-06 09:00",
+      "buckets": 4,
+      "minutes": 60
+    },
+    {
+      "asset_id": "RBT-CDR-01",
+      "fault_code": "ESTOP",
+      "start_pt": "2026-11-09 06:45",
+      "end_pt_exclusive": "2026-11-09 08:30",
+      "buckets": 7,
+      "minutes": 105
+    }
+  ],
+  "off_target_islands": [
+    {
+      "asset_id": "RBT-HBR-04",
+      "top_off_target": "OCC",
+      "protected_commodity": "OCC",
+      "hits_protected_product": "YES",
+      "start_pt": "2026-11-06 06:00",
+      "end_pt_exclusive": "2026-11-06 18:00",
+      "buckets": 48,
+      "off_target_rate": 0.3
+    },
+    {
+      "asset_id": "RBT-HBR-04",
+      "top_off_target": "OCC",
+      "protected_commodity": "OCC",
+      "hits_protected_product": "YES",
+      "start_pt": "2026-11-07 05:00",
+      "end_pt_exclusive": "2026-11-07 13:00",
+      "buckets": 32,
+      "off_target_rate": 0.3
+    },
+    {
+      "asset_id": "RBT-HBR-04",
+      "top_off_target": "OCC",
+      "protected_commodity": "OCC",
+      "hits_protected_product": "YES",
+      "start_pt": "2026-11-09 06:00",
+      "end_pt_exclusive": "2026-11-09 08:30",
+      "buckets": 10,
+      "off_target_rate": 0.3
+    }
+  ],
+  "low_target_success_islands": [
+    {
+      "asset_id": "RBT-HBR-02",
+      "start_pt": "2026-11-07 05:00",
+      "end_pt_exclusive": "2026-11-07 11:00",
+      "buckets": 24,
+      "target_success_rate": 0.619
+    }
+  ],
+  "low_commodity_success_islands": [
+    {
+      "asset_id": "RBT-HBR-02",
+      "commodity": "AL",
+      "start_pt": "2026-11-07 05:00",
+      "end_pt_exclusive": "2026-11-07 11:00",
+      "buckets": 24,
+      "success_rate": 0.62
+    },
+    {
+      "asset_id": "RBT-HBR-02",
+      "commodity": "HDPE",
+      "start_pt": "2026-11-07 05:00",
+      "end_pt_exclusive": "2026-11-07 11:00",
+      "buckets": 24,
+      "success_rate": 0.617
+    },
+    {
+      "asset_id": "RBT-HBR-02",
+      "commodity": "PET",
+      "start_pt": "2026-11-07 05:00",
+      "end_pt_exclusive": "2026-11-07 11:00",
+      "buckets": 24,
+      "success_rate": 0.62
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "commodity": "AL",
+      "start_pt": "2026-11-02 08:00",
+      "end_pt_exclusive": "2026-11-02 16:00",
+      "buckets": 32,
+      "success_rate": 0.712
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "commodity": "AL",
+      "start_pt": "2026-11-03 08:00",
+      "end_pt_exclusive": "2026-11-03 16:00",
+      "buckets": 32,
+      "success_rate": 0.712
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "commodity": "AL",
+      "start_pt": "2026-11-04 08:00",
+      "end_pt_exclusive": "2026-11-04 16:00",
+      "buckets": 32,
+      "success_rate": 0.712
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "commodity": "AL",
+      "start_pt": "2026-11-05 08:00",
+      "end_pt_exclusive": "2026-11-05 16:00",
+      "buckets": 32,
+      "success_rate": 0.712
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "commodity": "AL",
+      "start_pt": "2026-11-06 09:00",
+      "end_pt_exclusive": "2026-11-06 16:00",
+      "buckets": 28,
+      "success_rate": 0.712
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "commodity": "AL",
+      "start_pt": "2026-11-07 08:00",
+      "end_pt_exclusive": "2026-11-07 14:00",
+      "buckets": 24,
+      "success_rate": 0.712
+    }
+  ],
+  "low_air_islands": [
+    {
+      "asset_id": "RBT-HBR-02",
+      "start_pt": "2026-11-07 05:00",
+      "end_pt_exclusive": "2026-11-07 11:00",
+      "buckets": 24,
+      "avg_air_psi": 58.0,
+      "target_success_rate": 0.619
+    }
+  ],
+  "camera_issues": [
+    {
+      "asset_id": "SCN-CDR-02",
+      "position": "downstream",
+      "camera_health": "dirty_lens",
+      "first_scheduled_pt": "2026-11-06 08:00",
+      "last_scheduled_pt": "2026-11-09 08:15",
+      "scheduled_buckets": 82,
+      "avg_confidence": 0.61,
+      "unknown_share": 0.45
+    },
+    {
+      "asset_id": "SCN-RVB-03",
+      "position": "downstream",
+      "camera_health": "offline",
+      "first_scheduled_pt": "2026-11-07 09:00",
+      "last_scheduled_pt": "2026-11-07 13:45",
+      "scheduled_buckets": 20,
+      "avg_confidence": null,
+      "unknown_share": null
+    }
+  ],
+  "commodity_shifts": [
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "13:00",
+      "commodity": "AL",
+      "share": 0.131,
+      "baseline_same_hour": 0.04,
+      "delta": 0.09
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "13:00",
+      "commodity": "PET",
+      "share": 0.21,
+      "baseline_same_hour": 0.069,
+      "delta": 0.14
+    },
+    {
+      "asset_id": "SCN-LKS-02",
+      "pt_date": "2026-11-05",
+      "hour_pt": "13:00",
+      "commodity": "PET",
+      "share": 0.16,
+      "baseline_same_hour": 0.069,
+      "delta": 0.09
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "14:00",
+      "commodity": "AL",
+      "share": 0.131,
+      "baseline_same_hour": 0.04,
+      "delta": 0.09
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "14:00",
+      "commodity": "PET",
+      "share": 0.21,
+      "baseline_same_hour": 0.069,
+      "delta": 0.14
+    },
+    {
+      "asset_id": "SCN-LKS-02",
+      "pt_date": "2026-11-05",
+      "hour_pt": "14:00",
+      "commodity": "PET",
+      "share": 0.16,
+      "baseline_same_hour": 0.069,
+      "delta": 0.09
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "15:00",
+      "commodity": "AL",
+      "share": 0.131,
+      "baseline_same_hour": 0.04,
+      "delta": 0.091
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "15:00",
+      "commodity": "PET",
+      "share": 0.21,
+      "baseline_same_hour": 0.07,
+      "delta": 0.14
+    },
+    {
+      "asset_id": "SCN-LKS-02",
+      "pt_date": "2026-11-05",
+      "hour_pt": "15:00",
+      "commodity": "PET",
+      "share": 0.161,
+      "baseline_same_hour": 0.07,
+      "delta": 0.091
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "16:00",
+      "commodity": "AL",
+      "share": 0.131,
+      "baseline_same_hour": 0.04,
+      "delta": 0.091
+    },
+    {
+      "asset_id": "SCN-LKS-01",
+      "pt_date": "2026-11-05",
+      "hour_pt": "16:00",
+      "commodity": "PET",
+      "share": 0.21,
+      "baseline_same_hour": 0.07,
+      "delta": 0.14
+    },
+    {
+      "asset_id": "SCN-LKS-02",
+      "pt_date": "2026-11-05",
+      "hour_pt": "16:00",
+      "commodity": "PET",
+      "share": 0.161,
+      "baseline_same_hour": 0.07,
+      "delta": 0.091
+    }
+  ],
+  "robots_at_capacity": [
+    {
+      "asset_id": "RBT-LKS-01",
+      "start_pt": "2026-11-05 13:00",
+      "end_pt_exclusive": "2026-11-05 17:00",
+      "buckets": 16,
+      "picks_per_min": 45.0,
+      "target_success_rate": 0.929
+    }
+  ],
+  "invalid_pick_rows": [
+    {
+      "asset_id": "RBT-PAC-03",
+      "start_pt": "2026-11-06 14:00",
+      "end_pt_exclusive": "2026-11-06 17:00",
+      "buckets": 12,
+      "min_objects": 20,
+      "max_attempted": 40,
+      "max_success": 620
+    }
+  ],
+  "duplicate_buckets": [
+    {
+      "asset_id": "SCN-HBR-04",
+      "duplicated_buckets": 96,
+      "first_pt_label": "2026-11-03 00:00",
+      "last_pt_label": "2026-11-03 23:45"
+    }
+  ],
+  "timezone_mismatches": [
+    {
+      "asset_id": "SCN-LKS-02",
+      "buckets": 706,
+      "example_stored_label": "2026-11-02 08:00",
+      "example_correct_pt": "2026-11-02 00:00"
+    }
+  ],
+  "model_versions": [
+    {
+      "asset_id": "RBT-HBR-04",
+      "model_version": "v2.13.4",
+      "first_bucket_pt_label": "2026-11-02 00:00",
+      "last_bucket_pt_label": "2026-11-06 01:45",
+      "buckets": 392
+    },
+    {
+      "asset_id": "RBT-HBR-04",
+      "model_version": "v2.14.0",
+      "first_bucket_pt_label": "2026-11-06 02:00",
+      "last_bucket_pt_label": "2026-11-09 08:15",
+      "buckets": 314
+    }
+  ],
+  "commissioning_scorecard": [
+    {
+      "asset_id": "RBT-RVB-01",
+      "metric": "picks_per_min",
+      "actual": 31.0,
+      "comparison": ">=",
+      "threshold": 40.0,
+      "result": "FAIL"
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "metric": "safety_estop_buckets",
+      "actual": 0.0,
+      "comparison": "<=",
+      "threshold": 0.0,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "metric": "success_AL",
+      "actual": 0.712,
+      "comparison": ">=",
+      "threshold": 0.9,
+      "result": "FAIL"
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "metric": "success_HDPE",
+      "actual": 0.926,
+      "comparison": ">=",
+      "threshold": 0.9,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "metric": "success_PET",
+      "actual": 0.928,
+      "comparison": ">=",
+      "threshold": 0.9,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-01",
+      "metric": "uptime",
+      "actual": 0.967,
+      "comparison": ">=",
+      "threshold": 0.95,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-02",
+      "metric": "picks_per_min",
+      "actual": 39.0,
+      "comparison": ">=",
+      "threshold": 36.0,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-02",
+      "metric": "safety_estop_buckets",
+      "actual": 0.0,
+      "comparison": "<=",
+      "threshold": 0.0,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-02",
+      "metric": "success_AL",
+      "actual": 0.93,
+      "comparison": ">=",
+      "threshold": 0.9,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-02",
+      "metric": "success_HDPE",
+      "actual": 0.927,
+      "comparison": ">=",
+      "threshold": 0.9,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-02",
+      "metric": "success_PET",
+      "actual": 0.928,
+      "comparison": ">=",
+      "threshold": 0.9,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "RBT-RVB-02",
+      "metric": "uptime",
+      "actual": 1.0,
+      "comparison": ">=",
+      "threshold": 0.95,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "SCN-RVB-01",
+      "metric": "max_offline_min",
+      "actual": 0.0,
+      "comparison": "<=",
+      "threshold": 60.0,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "SCN-RVB-02",
+      "metric": "max_offline_min",
+      "actual": 0.0,
+      "comparison": "<=",
+      "threshold": 60.0,
+      "result": "PASS"
+    },
+    {
+      "asset_id": "SCN-RVB-03",
+      "metric": "max_offline_min",
+      "actual": 300.0,
+      "comparison": "<=",
+      "threshold": 60.0,
+      "result": "FAIL"
+    }
+  ],
+  "scanner_audit_deltas": [
+    {
+      "audit_date": "2026-11-05",
+      "line_id": "LN-LKS-RES",
+      "asset_id": "SCN-LKS-01",
+      "commodity": "AL",
+      "sample_size": 300,
+      "scanner_share": 0.131,
+      "audit_share": 0.12,
+      "delta": 0.011,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort at residue infeed, before the robot, during the afternoon the optical sorter was reported down."
+    },
+    {
+      "audit_date": "2026-11-05",
+      "line_id": "LN-LKS-RES",
+      "asset_id": "SCN-LKS-01",
+      "commodity": "FILM",
+      "sample_size": 300,
+      "scanner_share": 0.11,
+      "audit_share": 0.12,
+      "delta": -0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort at residue infeed, before the robot, during the afternoon the optical sorter was reported down."
+    },
+    {
+      "audit_date": "2026-11-05",
+      "line_id": "LN-LKS-RES",
+      "asset_id": "SCN-LKS-01",
+      "commodity": "HDPE",
+      "sample_size": 300,
+      "scanner_share": 0.02,
+      "audit_share": 0.03,
+      "delta": -0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort at residue infeed, before the robot, during the afternoon the optical sorter was reported down."
+    },
+    {
+      "audit_date": "2026-11-05",
+      "line_id": "LN-LKS-RES",
+      "asset_id": "SCN-LKS-01",
+      "commodity": "OCC",
+      "sample_size": 300,
+      "scanner_share": 0.05,
+      "audit_share": 0.06,
+      "delta": -0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort at residue infeed, before the robot, during the afternoon the optical sorter was reported down."
+    },
+    {
+      "audit_date": "2026-11-05",
+      "line_id": "LN-LKS-RES",
+      "asset_id": "SCN-LKS-01",
+      "commodity": "OTHER",
+      "sample_size": 300,
+      "scanner_share": 0.48,
+      "audit_share": 0.47,
+      "delta": 0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort at residue infeed, before the robot, during the afternoon the optical sorter was reported down."
+    },
+    {
+      "audit_date": "2026-11-05",
+      "line_id": "LN-LKS-RES",
+      "asset_id": "SCN-LKS-01",
+      "commodity": "PET",
+      "sample_size": 300,
+      "scanner_share": 0.21,
+      "audit_share": 0.2,
+      "delta": 0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort at residue infeed, before the robot, during the afternoon the optical sorter was reported down."
+    },
+    {
+      "audit_date": "2026-11-06",
+      "line_id": "LN-RVB-CON",
+      "asset_id": "SCN-RVB-01",
+      "commodity": "AL",
+      "sample_size": 480,
+      "scanner_share": 0.18,
+      "audit_share": 0.17,
+      "delta": 0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort on the Riverbend container infeed during ordinary production. Use for acceptance, not for the residue line."
+    },
+    {
+      "audit_date": "2026-11-06",
+      "line_id": "LN-RVB-CON",
+      "asset_id": "SCN-RVB-01",
+      "commodity": "FILM",
+      "sample_size": 480,
+      "scanner_share": 0.07,
+      "audit_share": 0.08,
+      "delta": -0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort on the Riverbend container infeed during ordinary production. Use for acceptance, not for the residue line."
+    },
+    {
+      "audit_date": "2026-11-06",
+      "line_id": "LN-RVB-CON",
+      "asset_id": "SCN-RVB-01",
+      "commodity": "HDPE",
+      "sample_size": 480,
+      "scanner_share": 0.22,
+      "audit_share": 0.23,
+      "delta": -0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort on the Riverbend container infeed during ordinary production. Use for acceptance, not for the residue line."
+    },
+    {
+      "audit_date": "2026-11-06",
+      "line_id": "LN-RVB-CON",
+      "asset_id": "SCN-RVB-01",
+      "commodity": "OCC",
+      "sample_size": 480,
+      "scanner_share": 0.08,
+      "audit_share": 0.09,
+      "delta": -0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort on the Riverbend container infeed during ordinary production. Use for acceptance, not for the residue line."
+    },
+    {
+      "audit_date": "2026-11-06",
+      "line_id": "LN-RVB-CON",
+      "asset_id": "SCN-RVB-01",
+      "commodity": "OTHER",
+      "sample_size": 480,
+      "scanner_share": 0.11,
+      "audit_share": 0.1,
+      "delta": 0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort on the Riverbend container infeed during ordinary production. Use for acceptance, not for the residue line."
+    },
+    {
+      "audit_date": "2026-11-06",
+      "line_id": "LN-RVB-CON",
+      "asset_id": "SCN-RVB-01",
+      "commodity": "PET",
+      "sample_size": 480,
+      "scanner_share": 0.34,
+      "audit_share": 0.33,
+      "delta": 0.01,
+      "within_5_points": "WITHIN",
+      "note": "Hand sort on the Riverbend container infeed during ordinary production. Use for acceptance, not for the residue line."
+    }
+  ],
+  "planned_maintenance": [
+    {
+      "asset_id": "RBT-PAC-01",
+      "start_pt": "2026-11-04 09:00",
+      "end_pt_exclusive": "2026-11-04 11:00",
+      "minutes": 120,
+      "fault_code": "PLANNED_PM"
+    }
+  ],
+  "benign_flow": [
+    {
+      "line_id": "LN-LKS-CON",
+      "belt_state": "stopped",
+      "start_pt": "2026-11-03 13:00",
+      "end_pt_exclusive": "2026-11-03 13:30",
+      "minutes": 30,
+      "escalation": "BELOW THRESHOLD"
+    },
+    {
+      "line_id": "LN-PAC-CON",
+      "belt_state": "empty",
+      "start_pt": "2026-11-06 10:00",
+      "end_pt_exclusive": "2026-11-06 10:45",
+      "minutes": 45,
+      "escalation": "BELOW THRESHOLD"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# No third-party packages.
+# Requires Python 3.11+ (sqlite3 from the standard library).
